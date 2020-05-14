@@ -1,0 +1,1 @@
+﻿SELECT COUNT(*) as 'containsEnroll' FROM Enrollment WHERE Enrollment.IdStudy = (SELECT DISTINCT IdStudy FROM Studies WHERE Studies.Name = @postedStudiesName) AND Enrollment.Semester = @semsterNo;
